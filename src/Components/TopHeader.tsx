@@ -3,14 +3,22 @@ export const TopHeader = () => {
   return (
     <section className="top-header">
       <div className="header-container container">
-        <div className="header-logo">DropBox</div>
+        <div className="header-logo">
+          <a href="#">Dropbox</a>
+        </div>
         <nav className="top-navigation">
           <ul className="left-navigation">
             <li>
-              <a href="#">Products</a>
+              <a href="#">
+                Products
+                <i className="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">Solutions</a>
+              <a href="#">
+                Solutions
+                <i className="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
               <a href="#">Enterprise</a>
@@ -30,7 +38,10 @@ export const TopHeader = () => {
               <a href="#">Contact Sales</a>
             </li>
             <li>
-              <a href="#">Get App</a>
+              <a href="#">
+                Get App
+                <i className="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
               <a href="#">Sign Up</a>
@@ -39,8 +50,8 @@ export const TopHeader = () => {
               <a href="#">Log In</a>
             </li>
           </ul>
-          <button className="get-started-btn">Get Started</button>
         </nav>
+        <button className="get-started-btn">Get Started</button>
       </div>
     </section>
   );

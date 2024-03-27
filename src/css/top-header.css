@@ -3,5 +3,40 @@
 }
 
 .top-header .header-container {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: var(--size-14);
+}
+
+.top-header .header-logo {
+  width: 100px;
+  display: flex;
+  margin-right: 20px;
+}
+
+.top-header .top-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.top-header .left-navigation,
+.top-header .right-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.top-header .top-navigation a {
+  color: var(--font-base);
+}
+
+.top-header .top-navigation a:hover {
+  color: var(--lnk-hover);
+}
+
+.top-header .left-navigation a {
+  font-weight: bold;
 }
