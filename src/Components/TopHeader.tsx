@@ -1,6 +1,12 @@
+import { useState } from "react";
 import "../css/top-header.css";
 import { GetStartedButton } from "./TopHeader/GetStartedButton";
+import { THeaderDropdownState } from "../types";
 export const TopHeader = () => {
+  const [headerDropdownState, setHeaderDropdownState] =
+    useState<THeaderDropdownState>("none");
+  const isLinkActive = (linkState: THeaderDropdownState) =>
+    headerDropdownState === linkState ? "active" : "";
   return (
     <section className="top-header">
       <div className="header-container container">
@@ -15,7 +21,15 @@ export const TopHeader = () => {
         <nav className="top-navigation">
           <ul className="left-navigation">
             <li>
-              <a href="#">
+              <a
+                href="#"
+                onMouseOver={() => {
+                  setHeaderDropdownState("products");
+                }}
+                onMouseLeave={() => {
+                  setHeaderDropdownState("none");
+                }}
+              >
                 Products
                 <i className="fa fa-chevron-down"></i>
               </a>
@@ -63,7 +77,7 @@ export const TopHeader = () => {
           </ul>
         </nav>
       </div>
-      <div className="header-drop-down"></div>
+      <div className={`header-dropdown ${isLinkActive("products")}`}></div>
     </section>
   );
 };
