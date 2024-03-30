@@ -1,4 +1,5 @@
 import "../css/top-header.css";
+import { GetStartedButton } from "./TopHeader/GetStartedButton";
 export const TopHeader = () => {
   return (
     <section className="top-header">
@@ -54,12 +55,15 @@ export const TopHeader = () => {
               <a href="#">Sign Up</a>
             </li>
             <li>
-              <a href="#">Log In</a>
+              <a href="#">Login</a>
+            </li>
+            <li>
+              <GetStartedButton />
             </li>
           </ul>
         </nav>
-        <button className="get-started-btn">Get Started</button>
       </div>
+      <div className="header-drop-down"></div>
     </section>
   );
 };
