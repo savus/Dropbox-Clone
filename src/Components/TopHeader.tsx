@@ -4,7 +4,12 @@ export const TopHeader = () => {
     <section className="top-header">
       <div className="header-container container">
         <div className="header-logo">
-          <a href="#">Dropbox</a>
+          <a href="#">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LPPm7iZFNa2j62VOoKWI39Br3KGgBhKvyz0zMr_xOA&s"
+              alt=""
+            />
+          </a>
         </div>
         <nav className="top-navigation">
           <ul className="left-navigation">
@@ -32,7 +37,9 @@ export const TopHeader = () => {
           </ul>
           <ul className="right-navigation">
             <li>
-              <a href="#">Globe</a>
+              <a href="#">
+                <i className="fa-solid fa-globe"></i>
+              </a>
             </li>
             <li>
               <a href="#">Contact Sales</a>

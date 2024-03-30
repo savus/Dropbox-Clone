@@ -6,12 +6,17 @@
   display: flex;
   align-items: center;
   font-size: var(--size-14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .top-header .header-logo {
   width: 100px;
   display: flex;
-  margin-right: 20px;
+  margin-right: 40px;
+}
+
+.top-header .header-logo img {
+  width: 100%;
 }
 
 .top-header .top-navigation {
@@ -27,6 +32,10 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
+}
+
+.top-header .top-navigation i {
+  margin-left: 10px;
 }
 
 .top-header .top-navigation a {
