@@ -11,13 +11,12 @@
 }
 
 .top-header .header-logo {
-  width: 100px;
   display: flex;
   margin-right: 40px;
 }
 
 .top-header .header-logo img {
-  width: 100%;
+  width: 100px;
 }
 
 .top-header .top-navigation {
@@ -66,15 +65,28 @@
 }
 
 .top-header .header-dropdown {
-  background-color: #000;
+  background-color: white;
   position: absolute;
   height: 0px;
   top: 100%;
   left: 0;
   right: 0;
   transition: height 350ms ease;
+  overflow: hidden;
 }
 
 .top-header .header-dropdown.active {
   height: 300px;
+}
+
+.top-header .header-dropdown .product-link {
+  padding: 10px;
+  max-width: 200px;
+  display: flex;
+  gap: 10px;
+  transition: background-color 350ms ease;
+}
+.top-header .header-dropdown .product-link:hover {
+  background-color: var(--bg-soft);
+  color: unset;
 }

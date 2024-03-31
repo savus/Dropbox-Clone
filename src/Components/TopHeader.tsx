@@ -9,7 +9,7 @@ export const TopHeader = () => {
     headerDropdownState === linkState ? "active" : "";
   return (
     <section className="top-header">
-      <div className="header-container container">
+      <div className="header-container">
         <div className="header-logo">
           <a href="#">
             <img
@@ -32,6 +32,28 @@ export const TopHeader = () => {
               >
                 Products
                 <i className="fa fa-chevron-down"></i>
+                <div className={`header-dropdown active`}>
+                  <div className="products-container">
+                    <div className="products-left">
+                      <ul>
+                        <li>
+                          <a href="#" className="product-link">
+                            <div className="icon-container">
+                              <i className="fa-brands fa-dropbox"></i>
+                            </div>
+                            <div className="content-container">
+                              <h4 className="product-header">Dropbox</h4>
+                              <p className="product-description">
+                                Store, share, and access files across devices
+                              </p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="products-right"></div>
+                  </div>
+                </div>
               </a>
             </li>
             <li>
@@ -77,7 +99,6 @@ export const TopHeader = () => {
           </ul>
         </nav>
       </div>
-      <div className={`header-dropdown ${isLinkActive("products")}`}></div>
     </section>
   );
 };
