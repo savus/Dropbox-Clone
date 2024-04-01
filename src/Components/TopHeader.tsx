@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../css/top-header.css";
 import { GetStartedButton } from "./TopHeader/GetStartedButton";
 import { THeaderDropdownState } from "../types";
+import { HeaderDropdown } from "./HeaderDropdown";
 export const TopHeader = () => {
   const [headerDropdownState, setHeaderDropdownState] =
     useState<THeaderDropdownState>("none");
@@ -32,28 +33,7 @@ export const TopHeader = () => {
               >
                 Products
                 <i className="fa fa-chevron-down"></i>
-                <div className={`header-dropdown active`}>
-                  <div className="products-container">
-                    <div className="products-left">
-                      <ul>
-                        <li>
-                          <a href="#" className="product-link">
-                            <div className="icon-container">
-                              <i className="fa-brands fa-dropbox"></i>
-                            </div>
-                            <div className="content-container">
-                              <h4 className="product-header">Dropbox</h4>
-                              <p className="product-description">
-                                Store, share, and access files across devices
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="products-right"></div>
-                  </div>
-                </div>
+                <HeaderDropdown isLinkActive={isLinkActive} />
               </a>
             </li>
             <li>

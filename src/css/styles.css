@@ -15,6 +15,7 @@
   --size-100: 6.25rem;
   --size-150: 9.375rem;
   --size-200: 12.5rem;
+  --transition-duration-base: 350ms;
 }
 
 *,
