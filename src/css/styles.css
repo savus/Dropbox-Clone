@@ -15,7 +15,10 @@
   --size-100: 6.25rem;
   --size-150: 9.375rem;
   --size-200: 12.5rem;
-  --transition-duration-base: 350ms;
+  /* base styles */
+  --transition-speed: 350ms;
+  --nav-size: 100px;
+  --border: rgba(0, 0, 0, 0.1);
 }
 
 *,
@@ -40,6 +43,7 @@ a {
   text-decoration: none;
   outline: none;
   background: transparent;
+  color: var(--text-color);
 }
 
 .container {

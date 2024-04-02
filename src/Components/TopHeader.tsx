@@ -1,13 +1,6 @@
-import { useState } from "react";
 import "../css/top-header.css";
-import { GetStartedButton } from "./TopHeader/GetStartedButton";
-import { THeaderDropdownState } from "../types";
-import { HeaderDropdown } from "./HeaderDropdown";
+import { Navbar } from "./Navbar";
 export const TopHeader = () => {
-  const [headerDropdownState, setHeaderDropdownState] =
-    useState<THeaderDropdownState>("none");
-  const isLinkActive = (linkState: THeaderDropdownState) =>
-    headerDropdownState === linkState ? "active" : "";
   return (
     <section className="top-header">
       <div className="header-container">
@@ -19,65 +12,7 @@ export const TopHeader = () => {
             />
           </a>
         </div>
-        <nav className="top-navigation">
-          <ul className="left-navigation">
-            <li>
-              <a
-                href="#"
-                onMouseOver={() => {
-                  setHeaderDropdownState("products");
-                }}
-                onMouseLeave={() => {
-                  setHeaderDropdownState("none");
-                }}
-              >
-                Products
-                <i className="fa fa-chevron-down"></i>
-                <HeaderDropdown isLinkActive={isLinkActive} />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Solutions
-                <i className="fa fa-chevron-down"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">Enterprise</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
-          <ul className="right-navigation">
-            <li>
-              <a href="#">
-                <i className="fa-solid fa-globe"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">Contact Sales</a>
-            </li>
-            <li>
-              <a href="#">
-                Get App
-                <i className="fa fa-chevron-down"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-            <li>
-              <GetStartedButton />
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 .top-header {
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border);
   position: relative;
 }
 
@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   font-size: var(--size-14);
+  height: var(--nav-size);
+  overflow: hidden;
 }
 
 .top-header .header-logo {
@@ -39,7 +41,8 @@
 }
 
 .top-header .top-navigation a {
-  color: var(--font-base);
+  color: var(--text-color);
+  transition: color var(--transition-speed) ease;
 }
 
 .top-header .top-navigation a:hover {
@@ -71,7 +74,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  transition: height var(--transition-duration-base) ease;
+  transition: height var(--transition-speed) ease;
   overflow: hidden;
 }
 
@@ -88,20 +91,20 @@
   max-width: 230px;
   display: flex;
   gap: 20px;
-  transition: background-color var(--transition-duration-base) ease,
-    color var(--transition-duration-base) ease;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
   border-radius: 10px;
 }
 
 .products-container .product-link:hover {
-  background-color: var(--bg-soft);
+  background-color: var(--bg-accent);
   color: unset;
 }
 
 .products-container .product-link i {
   font-size: var(--size-18);
   padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--lnk-hover);
 }
@@ -116,6 +119,6 @@
 
 .content-container .product-description {
   font-size: var(--size-12);
-  color: var(--font-soft);
+  color: var(--text-soft);
   font-weight: 400;
 }
