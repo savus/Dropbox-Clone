@@ -1,9 +1,0 @@
-:root {
-  --bg: hsl(0, 0%, 100%);
-  --bg-accent: rgb(224, 224, 224);
-  --bg-selected: rgb(242, 238, 232);
-  --text-color: rgb(30, 25, 25);
-  --text-soft: rgba(82, 74, 62, 0.82);
-  --btn-primary: rgb(0, 97, 254);
-  --lnk-hover: rgb(0, 97, 254);
-}
