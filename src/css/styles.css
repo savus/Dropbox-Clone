@@ -16,6 +16,7 @@
   --size-150: 9.375rem;
   --size-200: 12.5rem;
   --transition-speed: 300ms;
+  --header-height: 80px;
 }
 
 *,
@@ -44,6 +45,12 @@ a {
   outline: none;
   background: transparent;
   color: var(--text-link);
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .btn {
