@@ -1,0 +1,7 @@
+:root {
+  --text-color: rgb(247, 245, 242);
+  --text-link: rgb(30, 25, 25);
+  --text-link-hover: rgb(0, 97, 254);
+  --bg-button: rgb(0, 97, 254);
+  --bg-button-hover: rgb(0, 87, 229);
+}
