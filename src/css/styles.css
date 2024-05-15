@@ -16,7 +16,7 @@
   --size-150: 9.375rem;
   --size-200: 12.5rem;
   --transition-speed: 300ms;
-  --header-height: 80px;
+  --header-height: 70px;
 }
 
 *,
@@ -61,4 +61,17 @@ a {
   appearance: none;
   border: 1px solid transparent;
   background-color: transparent;
+}
+
+.btn-primary {
+  background-color: var(--bg-button);
+  transition: background-color var(--transition-speed) ease-in-out;
+  font-weight: bold;
+  color: var(--text-color);
+  padding: var(--size-12);
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-button-hover);
 }

@@ -1,5 +1,6 @@
 import "../css/top-header.css";
 import { NavItem } from "./NavItem";
+import DropboxLogo from "../assets/Dropbox-logo.png";
 
 export const TopHeader = () => {
   return (
@@ -7,7 +8,9 @@ export const TopHeader = () => {
       <nav className="left-navigation">
         <ul className="navbar-nav">
           <li className="logo-container">
-            <a href="#">Dropbox</a>
+            <a href="#" className="logo-container">
+              <img src={DropboxLogo} alt="" className="logo" />
+            </a>
           </li>
           <NavItem text="Products" hasChevron={true}>
             <></>
@@ -40,7 +43,7 @@ export const TopHeader = () => {
             <></>
           </NavItem>
           <li className="button-container">
-            <a href="#" className="get-started-button">
+            <a href="#" className="get-started-button btn btn-primary">
               Get Started
             </a>
           </li>
