@@ -75,3 +75,7 @@ a {
 .btn-primary:hover {
   background-color: var(--bg-button-hover);
 }
+
+.trigram {
+  font-size: var(--size-25);
+}

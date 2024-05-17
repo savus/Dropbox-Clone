@@ -5,13 +5,16 @@ import DropboxLogo from "../assets/Dropbox-logo.png";
 export const TopHeader = () => {
   return (
     <header className="top-header">
+      <div className="logo-container">
+        <a href="#" className="logo-container">
+          <img src={DropboxLogo} alt="" className="logo" />
+        </a>
+      </div>
+      <a href="#" className="trigram btn" aria-expanded="false">
+        <i className="fa-solid fa-bars"></i>
+      </a>
       <nav className="left-navigation">
         <ul className="navbar-nav">
-          <li className="logo-container">
-            <a href="#" className="logo-container">
-              <img src={DropboxLogo} alt="" className="logo" />
-            </a>
-          </li>
           <NavItem text="Products" hasChevron={true}>
             <></>
           </NavItem>
@@ -40,6 +43,9 @@ export const TopHeader = () => {
             <></>
           </NavItem>
           <NavItem text="Sign up" hasChevron={false}>
+            <></>
+          </NavItem>
+          <NavItem text="Login" hasChevron={false}>
             <></>
           </NavItem>
           <li className="button-container">
