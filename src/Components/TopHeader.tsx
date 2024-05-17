@@ -1,6 +1,7 @@
 import "../css/top-header.css";
 import { NavItem } from "./NavItem";
 import DropboxLogo from "../assets/Dropbox-logo.png";
+import { DropdownMenu } from "./DropdownMenu";
 
 export const TopHeader = () => {
   return (
@@ -16,7 +17,7 @@ export const TopHeader = () => {
       <nav className="left-navigation">
         <ul className="navbar-nav">
           <NavItem text="Products" hasChevron={true}>
-            <></>
+            <DropdownMenu />
           </NavItem>
           <NavItem text="Solutions" hasChevron={true}>
             <></>

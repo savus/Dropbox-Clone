@@ -11,7 +11,9 @@ export const NavItem = ({
 }) => {
   return (
     <li className="nav-item">
-      <a href="#">{text}</a>
+      <a href="#" data-dropdown={text.toLowerCase()}>
+        {text}
+      </a>
       {hasChevron && <i className="fa-solid fa-chevron-down"></i>}
       {children}
     </li>
