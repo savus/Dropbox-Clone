@@ -13,8 +13,8 @@ export const NavItem = ({
     <li className="nav-item">
       <a href="#" data-dropdown={text.toLowerCase()}>
         {text}
+        {hasChevron && <i className="fa-solid fa-chevron-down"></i>}
       </a>
-      {hasChevron && <i className="fa-solid fa-chevron-down"></i>}
       {children}
     </li>
   );

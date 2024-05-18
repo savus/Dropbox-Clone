@@ -40,14 +40,14 @@
   order: 4;
 }
 
-.top-header .nav-item {
+.top-header .nav-item > a {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
 .top-header .nav-item:hover > a,
-.top-header .nav-item:hover > i {
+.top-header .nav-item:hover > a i {
   color: var(--text-link-hover);
   transition: color var(--transition-speed) ease-in-out;
 }

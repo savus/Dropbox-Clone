@@ -1,0 +1,66 @@
+.top-header .nav-item:hover .dropdown-overlay {
+  height: 100%;
+}
+
+.top-header .nav-item:hover .dropdown-menu {
+  height: 100%;
+}
+
+.dropdown-overlay {
+  position: fixed;
+  top: var(--header-height);
+  max-height: 100vh;
+  height: 0%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: height calc(var(--transition-speed) * 0.5) ease-in-out;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  height: 0%;
+  background-color: #fff;
+  transition: height calc(var(--transition-speed) + 100ms) ease-in-out;
+  overflow: hidden;
+}
+
+.dropdown-menu .dropdown-content {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-menu .product {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 20px;
+  width: 250px;
+  transition: background-color var(--transition-speed) ease-in-out;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.dropdown-menu .product:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-menu .product:hover .product-header {
+  color: var(--text-link-hover);
+}
+
+.dropdown-menu .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropdown-menu .product-header {
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+.dropdown-menu .product-content {
+  color: var(--text-color-soft);
+  font-size: var(--size-14);
+  line-height: 1.3rem;
+}
