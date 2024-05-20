@@ -3,7 +3,7 @@
 }
 
 .top-header .nav-item:hover .dropdown-menu {
-  height: 100%;
+  opacity: 1;
 }
 
 .dropdown-overlay {
@@ -19,11 +19,15 @@
 }
 
 .dropdown-menu {
-  max-height: 200px;
-  height: 0%;
+  opacity: 0;
   background-color: #fff;
-  transition: height calc(var(--transition-speed) + 100ms) ease-in-out;
+  transition: opacity calc(var(--transition-speed) + 100ms) ease-in-out;
   overflow: hidden;
+  padding: 1rem;
+}
+
+.dropdown-menu.products .dropdown-content {
+  margin-left: 150px;
 }
 
 .dropdown-menu .dropdown-content {
@@ -32,9 +36,9 @@
 }
 
 .dropdown-menu .product {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   width: 250px;
   transition: background-color var(--transition-speed) ease-in-out;
   border-radius: 15px;
@@ -42,11 +46,25 @@
 }
 
 .dropdown-menu .product:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(104, 88, 65, 0.05);
 }
 
 .dropdown-menu .product:hover .product-header {
   color: var(--text-link-hover);
+}
+
+.dropdown-menu .icon-container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.dropdown-menu .icon-container i {
+  color: var(--text-link-hover);
+  font-size: var(--size-20);
 }
 
 .dropdown-menu .content-container {

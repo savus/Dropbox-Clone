@@ -2,8 +2,12 @@ import "../css/top-header.css";
 import { NavItem } from "./NavItem";
 import DropboxLogo from "../assets/Dropbox-logo.png";
 import { DropdownMenu } from "./DropdownMenu";
+import { Product } from "./Product";
+import { products } from "../navigation-content";
 
 export const TopHeader = () => {
+  const leftSideProducts = products.filter((_, index) => index <= 3);
+  const rightSideProducts = products.filter((_, index) => index > 3);
   return (
     <header className="top-header">
       <div className="logo-container">
@@ -17,7 +21,18 @@ export const TopHeader = () => {
       <nav className="left-navigation">
         <ul className="navbar-nav">
           <NavItem text="Products" hasChevron={true}>
-            <DropdownMenu />
+            <DropdownMenu menuCategory="products">
+              <div className="left-side">
+                {leftSideProducts.map((product) => (
+                  <Product key={product.id} product={product} />
+                ))}
+              </div>
+              <div className="right-side">
+                {rightSideProducts.map((product) => (
+                  <Product key={product.id} product={product} />
+                ))}
+              </div>
+            </DropdownMenu>
           </NavItem>
           <NavItem text="Solutions" hasChevron={true}>
             <></>
